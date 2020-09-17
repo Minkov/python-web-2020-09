@@ -18,6 +18,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django101',
+    'django102',
+    'django101_admin',
 ]
 
 MIDDLEWARE = [
@@ -35,6 +37,7 @@ ROOT_URLCONF = 'django101.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        # 'BACKEND': 'django.template.backends.jinja2.Jinja2',
         'DIRS': [BASE_DIR / 'templates']
         ,
         'APP_DIRS': True,

@@ -1,24 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>{{ title }}</title>
-    {#    <script>#}
-    {#        setTimeout(function() {#}
-    {#            alert('It works');#}
-    {#        }, 5000);#}
-    {#    </script>#}
-</head>
-<body>
-<h1>It works from ClassView</h1>
-{{ users }}
-{{ object_list }}
-<ul>
-    {% for user in users %}
-        <li>
-            {{ user.username }}
-        </li>
-    {% endfor %}
-</ul>
-</body>
-</html>
+{% extends 'shared/base.html' %}
+
+{% block site_title %}
+    Index page with CBV
+{% endblock %}
+
+{% block site_main_content %}
+    <h1>It works from ClassView</h1>
+    {{ users }}
+    {{ object_list }}
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.username }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

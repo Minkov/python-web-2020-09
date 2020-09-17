@@ -1,11 +1,7 @@
 from django.contrib import admin
-from django.urls import path
-
-from django101.views import index, UsersListView, GamesListView
+from django.urls import path, include
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', index),
-    path('2/', UsersListView.as_view()),
-    path('games/', GamesListView.as_view()),
+    # path('102/', include('django102.urls')),
+    path('', include('django102.urls')),
 ]
