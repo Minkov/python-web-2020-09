@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
+from django.views.decorators.http import require_GET
 from django.views.generic import ListView
 
 from django102.models import Game
@@ -40,3 +41,20 @@ class UsersListView(ListView):
 class GamesListView(ListView):
     model = Game
     template_name = 'games.html'
+
+
+@require_GET
+def methods_demo(request):
+    context = {
+        'name': 'Doncho',
+        'age': 19,
+    }
+
+    if request.content_type == 'application/json':
+        return JsonResponse(context)
+
+    return render(request, 'methods_demo.html', context)
+
+
+def raises_exception(request):
+    raise Exception('Raises')
