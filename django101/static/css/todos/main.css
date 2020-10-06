@@ -1,0 +1,36 @@
+ul, li, h1, h2, p {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+.root {
+    text-align: center;
+}
+
+.todo-list {
+
+}
+
+.todo-list-item {
+    border: 1px solid green;
+    padding: 10px 0;
+}
+
+.todo-description {
+    margin-top: 15px;
+}
+
+.red-text {
+    color: red;
+}
+
+.green-text {
+    color: green;
+}
+
+.collapsed .collapsable {
+    display: none;
+}

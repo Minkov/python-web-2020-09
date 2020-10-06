@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/todos/main.css' %}">
+</head>
+<body>
+<div class="root">
+    <h1>Todos App</h1>
+    <ul class="todo-list">
+        {% for todo in todos %}
+            <li class="todo-list-item collapse-container">
+                <h2 class="todo-title collapse-toggle ">
+                    {{ todo.title }}
+                </h2>
+                <p class="todo-description collapsable">
+                    {{ todo.description }}
+                </p>
+                {% if todo.is_done %}
+                    <p class="green-text">Done</p>
+                {% else %}
+                    <p class="red-text">Not done</p>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="collapse-container">
+    <p class="collapse-toggle">Toggle </p>
+    <p class="collapsable">I collapse</p>
+</div>
+
+<script src="{% static 'js/todos/main.js' %}">
+</script>
+</body>
+</html>
