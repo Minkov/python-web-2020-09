@@ -10,6 +10,10 @@ ul, li, h1, h2, p {
     text-align: center;
 }
 
+form {
+    text-align: left;
+}
+
 .todo-list {
 
 }
@@ -33,4 +37,11 @@ ul, li, h1, h2, p {
 
 .collapsed .collapsable {
     display: none;
+}
+
+.errorlist li:before {
+    content: 'x';
+    margin-right: 5px;
+    padding-left: 5px;
+    color: red;
 }

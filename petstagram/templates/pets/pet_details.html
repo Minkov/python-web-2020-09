@@ -27,7 +27,10 @@
         <div class="pet-buttons">
             {#            <a class="button button-blue" href="{% url 'like pet' pet.id %}">Like</a>#}
             <a href="{% url 'like pet' pet.id %}">
-                <i class="far fa-heart"></i>
+                {% if pet.is_liked %}
+                {% else %}
+                    <i class="far fa-heart"></i>
+                {% endif %}
             </a>
         </div>
         Likes: {{ pet.like_set.count }}
