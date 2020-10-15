@@ -56,6 +56,7 @@
                         </h2>
                         <p class="todo-description collapsable">
                             {{ todo.description }}
+                            {% url 'admin:index' %}
                         </p>
                         <form method="post" action="{% url 'mark todo done' todo.id %}">
                             {% csrf_token %}

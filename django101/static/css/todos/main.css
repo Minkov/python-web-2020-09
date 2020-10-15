@@ -39,7 +39,7 @@ form {
     display: none;
 }
 
-.errorlist li:before {
+.error  list li:before {
     content: 'x';
     margin-right: 5px;
     padding-left: 5px;

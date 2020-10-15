@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Model Forms Demo</title>
+</head>
+<body>
+<a class="text-light btn btn-success mt-2 ml-2" href="{% url 'create book' %}">Create new Book</a>
+<p class="display-4 mt-2 ml-2">All books</p>
+<div class="d-flex justify-content-start">
+    {% for book in books %}
+        <div class="card m-2" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ book.author }}</h6>
+                <p class="card-text">{{ book.description }}</p>
+                <h6 class="card-subtitle mb-2 text-muted">{{ book.pages }} pages</h6>
+                <a class="text-light btn btn-primary" href="{% url 'edit book' book.pk %}">Edit</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+</body>
+</html>

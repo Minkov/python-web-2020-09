@@ -6,4 +6,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('django102.urls')),
     path('todos/', include('todos_app.urls')),
+    path('books/', include('books.urls')),
 ]
