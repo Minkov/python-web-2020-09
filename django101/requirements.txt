@@ -1,6 +1,6 @@
 asgiref==3.2.10
+coverage==5.3
 Django==3.1.2
-Jinja2==2.11.2
 MarkupSafe==1.1.1
 psycopg2==2.8.6
 pytz==2020.1

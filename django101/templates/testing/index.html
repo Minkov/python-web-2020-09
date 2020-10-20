@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for profile in profiles %}
+        <li>
+            {{ profile.name }}
+        </li>
+    {% endfor %}
+</ul>
+<form method="post" action="{% url 'profiles' %}">
+    {{ form }}
+    {% csrf_token %}
+    <button>Create</button>
+</form>
+</body>
+</html>
