@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="django101" uuid="0dc13258-e396-4cda-9eaa-3b5cda456a30">
+    <data-source source="LOCAL" name="petstagram@localhost" uuid="325276af-0f57-48d5-9d70-8be5eb3f971d">
       <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
-      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
+      <jdbc-url>jdbc:postgresql://localhost:5432/petstagram</jdbc-url>
     </data-source>
   </component>
 </project>
