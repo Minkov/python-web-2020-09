@@ -8,4 +8,5 @@ urlpatterns = [
     path('todos/', include('todos_app.urls')),
     path('books/', include('books.urls')),
     path('profiles/', include('testing.urls')),
+    path('profiles/', include('testing.urls')),
 ]
