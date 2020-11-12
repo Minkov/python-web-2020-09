@@ -5,7 +5,7 @@
         {% for pet in pets %}
             <div class="col-lg-4">
                 <div class="card" style="width: 18rem;">
-                    <img src="{{ pet.image_url }}" class="card-img-top" alt="...">
+                    <img src="{{ pet.image.url }}" class="card-img-top" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{ pet.type }} {{ pet.name }}, Age: {{ pet.age }}</h5>
                         <p class="card-text">{{ pet.description }}</p>
